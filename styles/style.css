@@ -16,6 +16,9 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -35,4 +38,294 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.content {
+  display: flex;
+  gap: 20px;
+  align-items: end;
+}
+.result {
+  margin-top: 78px;
+  width: 711px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 2px;
+}
+.result__video-container {
+  width: 100%;
+  position: relative;
+}
+
+.result__video {
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Код формы */
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.search-form__fieldset {
+  width: 225px;
+  border: none;
+}
+.search-form__fieldset-title {
+  color: rgb(255, 255, 255);
+  font-family: 'Fira Sans Condensed';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+.search-form__label {
+  width: fit-content;
+  display: flex;
+}
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+} 
+.search-form__textfield {
+  width: 100%;
+  height: 100%;
+  padding: 3px 2px 3px 2px;
+  background-color: transparent;
+  border: none;
+  border-bottom: rgb(255, 255, 255) solid 1px;
+  border-top: rgb(255, 255, 255) solid 1px;
+  appearance: none;
+  color: rgb(255, 255, 255);
+}
+.search-form__textfield::placeholder {
+  color: rgb(255, 255, 255 /  0.7 );
+  font-family: 'Fira Sans Condensed';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.search-form__textfield:active {
+  border-left: rgb(255, 255, 255) solid 1px;
+  border-right: rgb(255, 255, 255) solid 1px;
+}
+.search-form__label .search-form__textfield:focus {
+  outline: none;
+}
+.search-form__label:has( .search-form__textfield:focus-visible) {
+  outline: rgb(255, 255, 255) solid 1px;
+  outline-offset: 1px;
+}
+.search-form__fieldset:last-of-type {
+  width: 212px;
+  align-self: start;
+}
+.search-form__checkbox-list {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.search-form__label-text {
+  color: rgb(255, 255, 255);
+  font-family: 'Fira Sans Condensed';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.search-form__label-text:hover {
+  border-bottom: rgb(255, 255, 255) solid 1px;
+  cursor: pointer;
+}
+.search-form__label:hover .search-form__label-text {
+  border-bottom: rgb(255, 255, 255) solid 1px;
+}
+.search-form__checkbox {
+  display: flex;
+  align-items: center;
+}
+.search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px;
+  border: rgb(255, 255, 255) solid 1px;
+  cursor: pointer;
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.search-form__pseudo-checkbox::before {
+  content: "";
+  display: none;
+  background-color: rgb(255, 255, 255);
+  width: 15px;
+  height: 15px;
+}
+.search-form__label .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+  display: block;
+}
+.search-form__label:focus {
+  outline: none;
+}
+.search-form__label:has( .search-form__checkbox:focus-visible) {
+  outline: rgb(255, 255, 255) solid 1px;
+  outline-offset: 1px;
+}
+.button {
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: 'Fira Sans Condensed';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: rgb(255, 255, 255) solid 0.2px;
+  cursor: pointer;
+}
+.button:hover {
+  text-decoration: underline 1px;
+  text-underline-offset: 2px;
+}
+.button:active {
+  background-color: rgb(145, 145, 145);
+  text-decoration: none;
+}
+.button:focus {
+  outline: none;
+}
+.button:focus-visible {
+  outline: rgb(255, 255, 255) solid 1px;
+  outline-offset: 1px;
+}
+.search-form__submit-button {
+  width: 194px;
+  height: 34px;
+  position: relative;
+}
+
+/* Стили блока вариантов городов */
+
+.content__details {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: end;
+}
+.title {
+  color: rgb(255, 255, 255);
+  font-family: 'Oswald';
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.content__accent {
+  color: rgb(84, 80, 80);
+  font-family: "Oswald";
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__list {
+  width: 100%;
+  height: 301px;
+  overflow-y: scroll;
+  padding-bottom: 2px;
+  padding-left: 2px;
+}
+.content__list::-webkit-scrollbar {
+  overflow: hidden; 
+}
+.content__card-link {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  margin: 2px 2px;
+}
+.content__list-item .content__card-link:focus .content__video-card {
+  outline: none;
+}
+.content__list-item .content__card-link:focus-visible .content__video-card {
+  outline: rgb(255, 255, 255) solid 1px;
+  outline-offset: 1px;
+}
+.content__list-item {
+  height: 107px;
+  margin-bottom: 30px;
+}
+.content__list-item:last-child {
+  margin-bottom: 0;
+}
+.content__video-card {
+  display: flex;
+  padding: 2px 1px;
+  gap: 2px;
+}
+
+.content__video-card-description-container {
+  justify-self: stretch;
+  align-self: stretch;
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 6px;
+  padding-top: 2px;
+}
+.content__video-card-title {
+  color: rgb(255, 255, 255);
+  font-family: 'Oswald';
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 107px;
+}
+.content__video-card-description {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
+}
+.content__video-card:hover .content__video-card-title, .content__video-card:hover .content__video-card-description {
+  border-bottom: rgb(255, 255, 255) solid 1px;
+}
+.content__video-card:active {
+  background-color: rgb(145, 145, 145);
+}
+.content__video-card:active .content__video-card-title, .content__video-card:active .content__video-card-description {
+  border: none;
+}
+.content__card-link_current {
+  background-color: rgb(145, 145, 145);
+}
+.more-button {
+  width: 98%;
+  height: 34px;
 }
