@@ -126,7 +126,7 @@ ol {
 .search-form__textfield::placeholder {
   transform: translateY(3px);
   text-align: start;
-  color: rgba(255, 255, 255, 0.70);;
+  color: rgba(255, 255, 255, 0.70);
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
