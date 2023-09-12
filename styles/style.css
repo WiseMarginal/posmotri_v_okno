@@ -112,11 +112,8 @@ ol {
   outline: none;
   border-bottom: rgb(255, 255, 255) solid 1px;
   border-top: rgb(255, 255, 255) solid 1px;
-  border-left: none;
-  border-right: none;
   appearance: none;
   text-align: start;
-  vertical-align: center;
   color: rgb(255, 255, 255);
   font-family: 'Fira Sans Condensed', 'Open Sans', 'Helvetica Neue', sans-serif;
   font-style: normal;
@@ -124,7 +121,7 @@ ol {
   line-height: normal;
 }
 .search-form__textfield::placeholder {
-  transform: translateY(3px);
+  transform: translateY(2px);
   text-align: start;
   color: rgba(255, 255, 255, 0.70);
   font-family: inherit;
@@ -132,10 +129,14 @@ ol {
   font-weight: 400;
   line-height: inherit;
 }
+.search-form__textfield:active {
+  outline: none;
+  border: rgb(255, 255, 255) solid 1px;
+}
 .search-form__textfield:focus {
   outline: none;
 }
-.search-form__textfield:focus-visible {
+.search-form__textfield:focus-visible:not(:active) {
   outline: rgb(255, 255, 255) solid 1px;
   outline-offset: 1px;
 }
